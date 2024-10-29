@@ -1,71 +1,76 @@
-<!-- HTML -->
-<div class="invitacion">
-  <div class="floral-header"></div>
-  <div class="contenido">
-    <h1>Steeven y Keren</h1>
-    <h2>!Nos Casamos!</h2>
-    <p></p>
-  </div>
-  <div class="contenido">
-    <div class="music-player">
-  <audio controls>
-    <source src="assets/your-audio-file.mp3" type="audio/mp3">
-    Tu navegador no soporta el elemento de audio.
-  </audio>
-</div>
-    <h1>¡Estas Invitado!</h1>
-    <p>Nos encantaria que seas parte de este momento tan especial</p>
-    <app-countdown></app-countdown>
-    <button type="button">Agendar Recordatorio</button>
-  </div>
-  <div class="contenido">
-    <h2>Ceremonia y Celebración</h2>
-    <h2>Jardín de Evnetos El Lago</h2>
-    <p>Te esperamos el</p>
-    <h2>27 de Sep | 12:00h</h2>
-    <p>Av. Calle 456, Estado, Ciudad, Estado</p>
-    <button type="button">Ver Ubicación</button>
-  </div>
-  <div class="contenido">
-    <h2>Código de Vestimenta</h2>
-    <h2>Formal</h2>
-    <p> Evento solo para adultos</p>
-  </div>
-  <div class="contenido">
-    <h2>Regalos</h2>
-    <h2>Lo más importante es tu presencia pero si deseas hacernos un regalo aquí tienes nuestros datos</h2>
-    <button type="button">Ver datos Bancarios</button>
-    <div>
-      <h1>Datos bancarios</h1>
+<body>
+  <div class="invitation">
+    <div class="header floral-header">
+      <!-- Agrega aquí la decoración floral si tienes una imagen o gráfico -->
     </div>
-  </div>
-  <div class="contenido">
-    <div class="confirm-attendance">
-      <h2>CONFIRMAR ASISTENCIA</h2>
+
+    <div class="contenido bienvenida">
+      <h1>Steeven y Keren</h1>
+      <h2>¡Nos Casamos!</h2>
+    </div>
+
+    <div class="contenido invitacion-musical">
+      <div class="music-player">
+        <audio controls>
+          <source src="assets/your-audio-file.mp3" type="audio/mp3" />
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+      <h2>¡Estás Invitado!</h2>
+      <p>Nos encantaría que seas parte de este momento tan especial</p>
+      <!-- <app-simple></app-simple> -->
+      <app-countdown></app-countdown>
+      <button type="button">Agendar Recordatorio</button>
+    </div>
+
+    <div class="contenido ceremonia bordered">
+      <h2>Ceremonia y Celebración</h2>
+      <h3>Jardín de Eventos El Lago</h3>
+      <p>Te esperamos el</p>
+      <h2>27 de Sep | 12:00h</h2>
+      <p>Av. Calle 456, Estado, Ciudad</p>
+      <button type="button">Ver Ubicación</button>
+    </div>
+
+    <div class="contenido vestimenta">
+      <h2>Código de Vestimenta</h2>
+      <p>Formal - Evento solo para adultos</p>
+    </div>
+
+    <div class="contenido regalos bordered">
+      <h2>Regalos</h2>
+      <p>
+        Lo más importante es tu presencia, pero si deseas hacernos un regalo
+        aquí tienes nuestros datos
+      </p>
+      <button type="button">Ver Datos Bancarios</button>
+    </div>
+
+    <div class="contenido confirmacion bordered">
+      <h2>Confirmar Asistencia</h2>
       <p>Por favor, confirma tu asistencia</p>
-      
+
       <div class="radio-btn">
         <input type="radio" id="yes" name="attendance" value="yes" />
         <label for="yes">Sí, allí estaré!</label>
-        
         <input type="radio" id="no" name="attendance" value="no" />
         <label for="no">No podré asistir</label>
       </div>
-    
+      <br>
       <div class="input-text">
         <input type="text" placeholder="Nombre y apellido" />
       </div>
-      
+      <br>
       <div class="input-text">
-        <textarea placeholder="Escribe tu mensaje"></textarea>
+        <input placeholder="Escribe tu mensaje">
       </div>
-    
-      <div class="button-submit">
-        <button type="submit">ENVIAR RESPUESTA</button>
-      </div>
+      <br>
+      <button type="submit">Enviar Respuesta</button>
     </div>
 
-    <h1>Te Esperamos</h1>
-    <h3>Keren y Steeven</h3>
+    <div class="contenido despedida">
+      <h2>Te Esperamos</h2>
+      <h3>Keren y Steeven</h3>
+    </div>
   </div>
-</div>
+</body>
