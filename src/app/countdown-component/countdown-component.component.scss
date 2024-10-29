@@ -1,36 +1,25 @@
-.music-player {
-    audio {
-      width: 100%;
-      margin: 20px 0;
-    }
-  }
-  
-  .countdown {
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    margin-top: 20px;
-  
-    .time-box {
-      background-color: #d3c6ad;
-      padding: 10px;
-      border-radius: 50%;
-      width: 80px;
-      height: 80px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-  
-      span {
-        font-size: 1.5em;
-        color: #000;
-      }
-  
-      p {
-        font-size: 0.8em;
-        color: #000;
-      }
-    }
-  }
-  
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.time-box {
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.time-box p {
+  margin: 0;
+  font-size: 18px;
+  color: #666;
+}
