@@ -1,25 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');
+$countdown-bg: #ede2de;
+$text-color: #cf8788;
+$highlight-color: #d49c9b;
+$box-bg: #e6c0be;
+$box-border: #bb6a71;
+
 .countdown {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
-  background-color: #f0f0f0;
-}
+  background-color: $countdown-bg;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-.time-box {
-  text-align: center;
-  font-size: 24px;
-  padding: 10px;
-}
+  .time-box {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    background-color: $box-bg;
+    border-radius: 8px;
+    border: 1px solid $box-border;
+    color: $text-color;
+    min-width: 80px;
 
-.time-box span {
-  display: block;
-  font-size: 48px;
-  font-weight: bold;
-}
+    span {
+      display: block;
+      font-size: 34px;
+      font-weight: bold;
+      color: $highlight-color;
+      margin-bottom: 5px; // Añade un margen inferior para separar el texto
+    }
 
-.time-box p {
-  margin: 0;
-  font-size: 18px;
-  color: #666;
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: darken($text-color, 10%);
+    }
+  }
+  button {
+    background-color: #750a2e;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    // font-family: 'Megihari', cursive;
+    // font-size: 1.2em;
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    font-style: normal;
+    //font-weight: bold;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #606655;
+    }
+
+    font-family: 'Great Vibes',
+    cursive;
+
+    @keyframes bounce {
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(-10px);
+      }
+
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+
+  }
 }
