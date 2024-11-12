@@ -1,76 +1,109 @@
-<body>
-  <div class="invitation">
-    <div class="floral-header header">
-      <!-- Agrega aquí la decoración floral si tienes una imagen o gráfico -->
-    </div>
+<div class="invitation">
+  <!-- <div class="floral-header header">
+    Agrega aquí la decoración floral si tienes una imagen o gráfico
+  </div> -->
 
-    <div class="welcome-section">
-      <h1>Steeven y Keren</h1>
-      <h2>¡Nos Casamos!</h2>
-    </div>
-
-    <div class="invitation-music">
-      <div class="music-player">
-        <audio controls>
-          <source src="assets/your-audio-file.mp3" type="audio/mp3" />
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-      </div>
-      <h2>¡Estás Invitado!</h2>
-      <p>Nos encantaría que seas parte de este momento tan especial</p>
-      <!-- <app-simple></app-simple> -->
-      <app-countdown></app-countdown>
-    </div>
-
-    <div class="ceremony-section bordered">
-      <h2>Ceremonia y Celebración</h2>
-      <h3>Jardín de Eventos El Lago</h3>
-      <p>Te esperamos el</p>
-      <h2>27 de Sep | 12:00h</h2>
-      <p>Av. Calle 456, Estado, Ciudad</p>
-      <app-location-map></app-location-map>
-      <button type="button">Ver Ubicación</button>
-    </div>
-
-    <div class="attire-section">
-      <h2>Código de Vestimenta</h2>
-      <p>Formal - Evento solo para adultos</p>
-    </div>
-
-    <div class="gifts-section bordered">
-      <h2>Regalos</h2>
-      <p>
-        Lo más importante es tu presencia, pero si deseas hacernos un regalo
-        aquí tienes nuestros datos
-      </p>
-      <button type="button">Ver Datos Bancarios</button>
-    </div>
-
-    <div class="confirmation-section bordered">
-      <h2>Confirmar Asistencia</h2>
-      <p>Por favor, confirma tu asistencia</p>
-
-      <div class="radio-btn">
-        <input type="radio" id="yes" name="attendance" value="yes" />
-        <label for="yes">Sí, allí estaré!</label>
-        <input type="radio" id="no" name="attendance" value="no" />
-        <label for="no">No podré asistir</label>
-      </div>
-      <br>
-      <div class="input-text">
-        <input type="text" placeholder="Nombre y apellido" />
-      </div>
-      <br>
-      <div class="input-text">
-        <input placeholder="Escribe tu mensaje">
-      </div>
-      <br>
-      <button type="submit">Enviar Respuesta</button>
-    </div>
-
-    <div class="farewell-section">
-      <h2>Te Esperamos</h2>
-      <h3>Keren y Steeven</h3>
+  <div class="welcome-section">
+    <h1>Steeven y Keren</h1>
+    <h2>¡Nos Casamos!</h2>
+  </div>
+  <div class="generalText">
+    <p> <strong>Asi que no son ya más dos sino una sola carne; <br>por tanto lo que Dios Junto, no lo separe el hombre <br></strong>  Mateo 19:06 </p>
+  </div>
+  <div class="invitation-music">
+    <div class="music-player">
+      <audio controls autoplay>
+        <source src="assets/Hasta el final - Majo Solís Letra.mp3" type="audio/mp3" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
     </div>
   </div>
-</body>
+  <div class="welcome-section">
+    <h2>¡Estás Invitado!</h2>
+    <p>Seria un honor que formaras parte de este momento tan especial</p>
+    <app-countdown></app-countdown>
+  </div>
+  
+  <div class="ceremony-section bordered">
+    <h2>Ceremonia y Celebración</h2>
+    <h3>Hacienda La Antigua Escondida</h3>
+    <p>Te esperamos el</p>
+    <h2>23 de Febrero | 17:00h</h2>
+    <p>Av. Tonala #114</p>
+    <div class="container">
+      <button class="button type--C" (click)='openInGoogleMaps()'>
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">Ver Ubicación</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </button>
+    </div>
+  </div>
+
+  <div class="attire-section">
+    <h2>Código de Vestimenta</h2>
+    <p>Formal para un evento al aire libre - Evento solo para adultos</p>
+  </div>
+
+  <div class="gifts-section bordered">
+    <h2>Regalos</h2>
+    <p>
+      ¡Tu presencia será un regalo muy apreciado, si desear mejor aún este celebración y hacernos un obsequio aqui tienes algunas opciones!
+    </p>
+    <ul>
+      <li>Un link de regalos</li>
+      
+      <li>Transefrencias Bancarias: </li>
+      <br>
+      <div class="container">
+        <button class="button type--C" (click)="toggleBankingInfo()">
+          <div class="button__line"></div>
+          <div class="button__line"></div>
+          <span class="button__text">Ver datos bancarios</span>
+          <div class="button__drow1"></div>
+          <div class="button__drow2"></div>
+        </button>
+      </div>
+      
+    </ul>
+    
+
+
+    <div *ngIf="showBankingInfo" class="gifts-section bordered">
+      <h3>Datos Bancarios de los Novios</h3>
+      <p>Keren:</p>
+      <p><strong>Banco:</strong>BBVA</p>
+      <p><strong>Número de Cuenta:</strong> 012 320 01533954602 4      </p>
+      <p><strong>Tarjeta de débito:</strong>  4152 3142 3548 9286</p>
+    </div>
+
+  </div>
+  <div class="farewell-section">
+    <h1>Padres:</h1>
+    <h2>Novia</h2>
+      <p>Arturo Herrera Ramirez</p>
+      <p>Maria Gutierrez Chavez</p>
+    <h2>Novio</h2>
+      <p>Wendy Aurora Nancy Perez Hernandez</p>
+  </div>
+
+  <div class="confirmation-section bordered">
+    <h2>Confirmar Asistencia</h2>
+    <p>Por favor, confirma tu asistencia</p>
+    <div class="container">
+      <button class="button type--C" (click)='onSubmit()'>
+        <div class="button__line"></div>
+        <div class="button__line"></div>
+        <span class="button__text">Ver Formulario</span>
+        <div class="button__drow1"></div>
+        <div class="button__drow2"></div>
+      </button>
+    </div>
+  </div>
+
+  <div class="farewell-section">
+    <h2>Te Esperamos</h2>
+    <h3>Keren y Steeven</h3>
+  </div>
+</div>

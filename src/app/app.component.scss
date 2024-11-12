@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Playwrite+GB+S:wght@100..400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Mea+Culpa&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mea+Culpa&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mea+Culpa&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antic+Slab&family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Mea+Culpa&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
 // Variables de colores
-$color-light-rose: #edd2c7;
+$color-light-rose: #000000;
+//#edd2c7;
 $color-rose: #ebd7ce;
 $color-pale-rose: #ede2de;
 $color-warm-rose: #e3b6b1;
@@ -18,13 +22,18 @@ $color-muted-green: #9ca68b;
 $color-pale-green: #bbc3ae;
 
 // Variables de fuente y bordes
-$font-primary: "Playwrite GB S", sans-serif;
-$font-secondary: "Mea Culpa", cursive;
-$border-radius: 8px;
+// $font-primary: "Edu AU VIC WA NT Pre", cursive;
+// $font-secondary: "Libre Baskerville", serif;
+// $font-third: "Libre Baskerville", serif;
+//"Cinzel", serif, 
+$font-primary: "Playwrite GB S", serif;
+$font-secondary: "Antic Slab", serif;
+$font-third: "Antic Slab", serif;
+$border-radius: 100px;
 $border-color: $color-vintage-rose;
 
 .floral-header {
-  background-image: url('/assets/438092527_1927476927717338_4922564564127075178_n.png');
+  background-image: url('/assets/by-soft-watercolor-floral-elements.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,8 +63,8 @@ $border-color: $color-vintage-rose;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #E2DFD2;
-  color: $color-deep-rose;
+  background-color: #e6c0be;
+  color: #000000;
   font-family: $font-primary;
   font-weight: 400;
   font-style: normal;
@@ -68,38 +77,55 @@ $border-color: $color-vintage-rose;
   .header-section {
     font-family: $font-secondary; // Aplicar la fuente secundaria
     font-size: 2em;
-    color: $color-dusty-rose;
+    color: #fff;
+    //$color-dusty-rose;
   }
 
   .body-section {
     text-align: justify;
     font-size: 1em;
     line-height: 1.5;
-    color: $color-rosewood;
-    
-    h1, h2, p {
-      color: $color-muted-rose;
+    color: #ffffff;
+    //$color-rosewood;
+
+    h1,
+    h2,
+    p {
+      color: #000000;
     }
 
-    h1, h2 {
+    h1 {
+      font-family: $font-primary;
+    }
+
+    h2 {
       font-family: $font-secondary;
     }
 
     p {
+      font-family: $font-third;
       font-size: 1.2em;
     }
   }
 
   .welcome-section {
-    h1, h2 {
-      font-family: 'Mea Culpa', cursive;
-      font-size:  3.5em;
+    h1 {
+      font-family: $font-primary;
+      font-size: 3.5em;
     }
   }
+
   .farewell-section {
-    h2, h3 {
-      font-family: 'Mea Culpa', cursive;
-      font-size:  2.5em;
+
+    h2,
+    h3 {
+      font-family: $font-primary;
+      font-size: 2.5em;
+    }
+
+    p {
+      font-family: $font-third;
+      font-size: 1.5em;
     }
   }
 
@@ -108,24 +134,142 @@ $border-color: $color-vintage-rose;
     text-align: center;
   }
 
+  .generalText {
+    .body-section {
+      font-size: 1em;
+      line-height: 1.5;
+      text-align: justify;
+      color: #000000;
+
+      h1 {
+        font-family: $font-primary;
+        color: #000000;
+      }
+
+      h2 {
+        font-family: $font-secondary;
+      }
+
+      p {
+        font-family: $font-third;
+        font-size: 1.2em;
+
+      }
+    }
+  }
+
   .bordered {
     padding: 10px;
     border: 1px dashed $color-muted-green;
     border-radius: $border-radius;
-    background-color: $color-pale-rose;
+    background-color: #fff;
+    //$color-pale-rose;
   }
 
-  button {
-    background-color: #750a2e;
-    color: #ffffff;
-    padding: 10px 20px;
+  .banking-info {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #fff;
+    //#ddd;
     border-radius: 5px;
-    font-family: $font-primary;
-    font-weight: 400;
-    transition: background-color 0.3s ease;
+  }
 
-    &:hover {
-      background-color: #606655;
+  // button {
+  //   background-color: #750a2e;
+  //   color: #ffffff;
+  //   padding: 10px 20px;
+  //   border-radius: 20px;
+  //   font-family: $font-primary;
+  //   font-weight: 400;
+  //   transition: background-color 0.3s ease;
+
+  //   &:hover {
+  //     background-color: #606655;
+  //   }
+  // }
+  $type-colors: (
+    A: (line-color: #555555, back-color: #ffecf6),
+    B: (line-color: #1b1919, back-color: #e9ecff),
+    C: (line-color: #00135c, back-color: #defffa)
+  );
+
+@each $type, $colors in $type-colors {
+  .type--#{$type} {
+    --line_color: map-get($colors, line-color);
+    --back_color: map-get($colors, back-color);
+  }
+}
+
+  .container {
+    width:100%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .button:not(:last-child) {
+      margin-bottom: 64px;
     }
   }
+  .button {
+    position: relative;
+    width: 240px; // Ajusta este valor según el tamaño que desees
+    height: 56px;
+    color: #000000; // Asegúrate de que el color coincida con el del primer botón
+    border: 2px solid #000000;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .button::before,
+  .button::after {
+    content: "";
+    position: absolut;
+    height: 2px;
+    background: var(--line_color);
+    transition: width 0.3s ease;
+  }
+
+  .button::before {
+    top: 0;
+    left: 15%;
+    width: 30%;
+  }
+
+  .button::after {
+    bottom: 0;
+    right: 15%;
+    width: 30%;
+  }
+
+  .button:hover::before,
+  .button:hover::after {
+    width: 50%; // Ajusta el ancho según el diseño deseado
+  }
+  .button__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  @keyframes lineAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 30%;
+    }
+  }
+  
+  .button:hover::before {
+    animation: lineAnimation 0.3s forwards;
+  }  
+
 }
