@@ -48,7 +48,6 @@ export class CountdownComponent implements OnInit, OnDestroy {
     );
     //this.cdr.detectChanges();
   }
-
   resetCountdown() {
     this.days = this.hours = this.minutes = this.seconds = 0;
     clearInterval(this.intervalId);
