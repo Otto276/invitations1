@@ -272,4 +272,53 @@ $border-color: $color-vintage-rose;
     animation: lineAnimation 0.3s forwards;
   }  
 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  
+    .modal-content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+  
+      .modal-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+  
+        button {
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+  
+        button:first-of-type {
+          background-color: #e6c0be;
+          color: rgb(0, 0, 0);
+        }
+  
+        button:last-of-type {
+          background-color: rgb(170, 235, 184);
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+  
 }

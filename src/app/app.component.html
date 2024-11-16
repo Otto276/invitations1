@@ -1,4 +1,13 @@
 <div class="invitation">
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <h2>¿Quieres iniciar la música?</h2>
+      <div class="modal-buttons">
+        <button (click)="startMusic(true)">Sí</button>
+        <button (click)="startMusic(false)">No</button>
+      </div>
+    </div>
+  </div>
   <!-- <div class="floral-header header">
     Agrega aquí la decoración floral si tienes una imagen o gráfico
   </div> -->
