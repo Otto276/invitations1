@@ -1,22 +1,18 @@
 <div class="countdown">
-    <div class="time-box">
-      <span>{{ days }}</span>
-      <p>DÍAS</p>
-    </div>
-    <div class="time-box">
-      <span>{{ hours }}</span>
-      <p>HORAS</p>
-    </div>
-    <div class="time-box">
-      <span>{{ minutes }}</span>
-      <p>MINUTOS</p>
-    </div>
-    <div class="time-box">
-      <span>{{ seconds }}</span>
-      <p>SEGUNDOS</p>
-    </div>
+  <div class="countdown__item">
+    <span class="countdown__value">{{ days }}</span>
+    <span class="countdown__label">Días</span>
+  </div>
+  <div class="countdown__item">
+    <span class="countdown__value">{{ hours }}</span>
+    <span class="countdown__label">Horas</span>
+  </div>
+  <div class="countdown__item">
+    <span class="countdown__value">{{ minutes }}</span>
+    <span class="countdown__label">Minutos</span>
+  </div>
+  <div class="countdown__item">
+    <span class="countdown__value">{{ seconds }}</span>
+    <span class="countdown__label">Segundos</span>
+  </div>
 </div>
-<div class="countdown">
-  <button type="button">Agendar Recordatorio</button>
-</div>
-  
