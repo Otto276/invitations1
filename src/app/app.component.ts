@@ -11,6 +11,7 @@ import { CountdownComponent } from './countdown-component/countdown-component.co
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  showModal: boolean = true;
   title = 'Fecha';
   attendanceForm: FormGroup;
   showBankingInfo = false;
@@ -24,7 +25,13 @@ export class AppComponent {
       mensaje: ['']
     });
   }
-
+  startMusic(shouldPlay: boolean) {
+    this.showModal = false;
+    if (shouldPlay) {
+      const audioPlayer = document.querySelector('audio') as HTMLAudioElement;
+      audioPlayer?.play();
+    }
+  }
   toggleBankingInfo(): void {
     this.showBankingInfo = !this.showBankingInfo;
   }

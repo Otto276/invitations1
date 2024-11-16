@@ -1,15 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 <div class="invitation">
-  <!-- <div class="floral-header header">
-    Agrega aquí la decoración floral si tienes una imagen o gráfico
-  </div> -->
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <h2>¿Quieres iniciar la música?</h2>
+      <div class="modal-buttons">
+        <button (click)="startMusic(true)">Sí</button>
+        <button (click)="startMusic(false)">No</button>
+      </div>
+    </div>
+  </div>
 
   <div class="welcome-section">
-    <h1>Steeven y Keren</h1>
-    <h2>¡Nos Casamos!</h2>
+    <video class="background-video" autoplay muted loop>
+      <source src="/assets/video2.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
   </div>
-  <div class="generalText">
-    <p> <strong>Asi que no son ya más dos sino una sola carne; <br>por tanto lo que Dios Junto, no lo separe el hombre <br></strong>  Mateo 19:06 </p>
-  </div>
+
   <div class="invitation-music">
     <div class="music-player">
       <audio controls autoplay>
@@ -18,9 +26,9 @@
       </audio>
     </div>
   </div>
-  <div class="welcome-section">
-    <h2>¡Estás Invitado!</h2>
-    <p>Seria un honor que formaras parte de este momento tan especial</p>
+  <div class="attire-section">
+    <h2><span class="invitation-icon"><i class="fas fa-glass-cheers"></i></span> ¡Estás Invitado!</h2>
+    <p>Sería un honor que formaras parte de este momento tan especial</p>
     <app-countdown></app-countdown>
   </div>
   
@@ -42,7 +50,7 @@
   </div>
 
   <div class="attire-section">
-    <h2>Código de Vestimenta</h2>
+    <h2><span class="dress-code-icon"><img src="assets/vestido-de-novia.ico"></span> Código de Vestimenta</h2>
     <p>Formal para un evento al aire libre - Evento solo para adultos</p>
   </div>
 
@@ -52,9 +60,19 @@
       ¡Tu presencia será un regalo muy apreciado, si desear mejor aún este celebración y hacernos un obsequio aqui tienes algunas opciones!
     </p>
     <ul>
-      <li>Un link de regalos</li>
+      <br>
+      <div class="container">
+        <button class="button type--C">
+          <div class="button__line"></div>
+          <div class="button__line"></div>
+          <a  href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51508458">
+            <span class="button__text">Lista de Regalos</span>
+          </a>
+          <div class="button__drow1"></div>
+          <div class="button__drow2"></div>
+        </button>
+      </div>
       
-      <li>Transefrencias Bancarias: </li>
       <br>
       <div class="container">
         <button class="button type--C" (click)="toggleBankingInfo()">
@@ -76,11 +94,18 @@
       <p><strong>Banco:</strong>BBVA</p>
       <p><strong>Número de Cuenta:</strong> 012 320 01533954602 4      </p>
       <p><strong>Tarjeta de débito:</strong>  4152 3142 3548 9286</p>
+
+      <p>Steeven:</p>
+      <p><strong>Banco:</strong>BBVA</p>
+      <p><strong>Número de Cuenta:</strong>  012 320 01529695078 2     </p>
+      <p><strong>Tarjeta de débito:</strong>  4152 3141 7855 2520</p>
+
+     
     </div>
 
   </div>
   <div class="farewell-section">
-    <h1>Padres:</h1>
+    <h1><span class="dress-code-icon"><img src="assets/33728.ico"></span>Padres:</h1>
     <h2>Novia</h2>
       <p>Arturo Herrera Ramirez</p>
       <p>Maria Gutierrez Chavez</p>
@@ -104,6 +129,6 @@
 
   <div class="farewell-section">
     <h2>Te Esperamos</h2>
-    <h3>Keren y Steeven</h3>
+    <h1>Keren y Steeven</h1>
   </div>
 </div>
