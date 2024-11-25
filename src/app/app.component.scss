@@ -1,4 +1,3 @@
-// Variables de colores
 $color-rose: #ebd7ce;
 $color-soft-pink: #e6c0be;
 $color-vintage-rose: #d29ba0;
@@ -37,7 +36,9 @@ $border-color: $color-vintage-rose;
   max-width: 600px;
   margin: 10px auto;
   padding: 10px;
-  background-color: $color-soft-pink;
+  background: $color-soft-pink url("/assets/flores.png")center center;
+  //background-color: $color-soft-pink;
+  //background-image: "assets/stars.png";
   border-radius: $border-radius;
   border: 2px solid $border-color;
   font-family: $font-primary;
@@ -46,6 +47,10 @@ $border-color: $color-vintage-rose;
     font-family: $font-secondary;
     font-size: 2em;
     color: #fff;
+  }
+  .custom-img {
+    width: 175px;  
+    height: 175px;
   }
 
   .body-section {
@@ -91,11 +96,8 @@ $border-color: $color-vintage-rose;
 
   .farewell-section {
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       font-family: $font-primary;
-      font-style: italic;
     }
 
     p {
@@ -103,7 +105,6 @@ $border-color: $color-vintage-rose;
       font-size: 1.5em;
     }
   }
-
 
   .footer-section {
     padding: 10px;
@@ -179,9 +180,9 @@ $border-color: $color-vintage-rose;
 
 .button {
   position: relative;
-  width: 240px; // Ajusta este valor según el tamaño que desees
+  width: 240px;
   height: 56px;
-  color: #000000; // Asegúrate de que el color coincida con el del primer botón
+  color: #000000;
   border: 2px solid #000000;
   border-radius: 30px;
   display: flex;
@@ -216,7 +217,7 @@ $border-color: $color-vintage-rose;
 
 .button:hover::before,
 .button:hover::after {
-  width: 50%; // Ajusta el ancho según el diseño deseado
+  width: 50%;
 }
 
 .button__text {
