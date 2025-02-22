@@ -1,132 +1,17 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <div class="invitation">
-  <div *ngIf="showModal" class="modal">
-    <div class="modal-content">
-      <h2>¿Quieres iniciar la música?</h2>
-      <div class="modal-buttons">
-        <button (click)="startMusic(true)">Sí</button>
-        <button (click)="startMusic(false)">No</button>
-      </div>
-    </div>
-  </div>
+    <div class="floral-decor"></div> <!-- Decoración floral -->
+    <div class="gold-dust"></div> <!-- Efecto dorado -->
 
-  <div class="welcome-section">
-    <video class="background-video" autoplay muted loop>
-      <source src="/assets/video2.mp4" type="video/mp4">
-      Tu navegador no soporta la reproducción de video.
-    </video>
-  </div>
-
-  <div class="invitation-music">
-    <div class="music-player">
-      <audio controls autoplay>
-        <source src="assets/hasta-el-final-majo-solis.mp3" type="audio/mp3" />
-        Tu navegador no soporta el elemento de audio.
-      </audio>
-    </div>
-  </div>
-  <div class="attire-section">
-    <h2> ¡Estás Invitado!</h2>
-    <img src="assets/65155.png" class="custom-img">
-    <p>Sería un honor que formaras parte de este momento tan especial</p>
-    <app-countdown></app-countdown>
-  </div>
-
-  <div class="ceremony-section bordered">
-    <h2>Ceremonia y Celebración</h2>
-    <h3>Hacienda La Antigua Escondida</h3>
-    <p>Te esperamos el</p>
-    <h2>23 de Febrero | 19:00h</h2>
-    <p>Av. Tonala #114</p>
     <div class="container">
-      <button class="button type--C" (click)='openInGoogleMaps()'>
-        <div class="button__line"></div>
-        <div class="button__line"></div>
-        <span class="button__text">Ver Ubicación</span>
-        <div class="button__drow1"></div>
-        <div class="button__drow2"></div>
-      </button>
-    </div>
-  </div>
-
-  <div class="attire-section">
-    <h2> Código de Vestimenta</h2>
-    <img src="assets/vestido-de-novia.png" class="custom-img">
-    <p>Formal para un evento al aire libre - Evento solo para adultos</p>
-  </div>
-
-  <div class="gifts-section bordered">
-    <h2>Regalos</h2>
-    <p>
-      ¡Tu presencia será un regalo muy apreciado,  si deseas hacernos un obsequio aquí tienes algunas opciones!
-    </p>
-
-    <br>
-    <div class="container">
-      <button class="button type--C">
-        <div class="button__line"></div>
-        <div class="button__line"></div>
-        <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51508458">
-          <span class="button__text">Lista de Regalos</span>
+        <div class="attire-section">
+            <h2>Te invitamos a compartir tus momentos favoritos con nosotros</h2>
+            <h1>Keren y Steeven</h1>
+        </div>
+        
+        <a href="https://www.bodas.net/web/W9260589" class="button">
+            <i class="fas fa-camera"></i> Abrir galería
         </a>
-        <div class="button__drow1"></div>
-        <div class="button__drow2"></div>
-      </button>
     </div>
-
-    <br>
-    <div class="container">
-      <button class="button type--C" (click)="toggleBankingInfo()">
-        <div class="button__line"></div>
-        <div class="button__line"></div>
-        <span class="button__text">Ver datos bancarios</span>
-        <div class="button__drow1"></div>
-        <div class="button__drow2"></div>
-      </button>
-    </div>
-
-    <div *ngIf="showBankingInfo" class="gifts-section bordered">
-      <h3>Datos Bancarios de los Novios</h3>
-      <p>Keren:</p>
-      <p><strong>Banco:</strong>BBVA</p>
-      <p><strong>Número de Cuenta:</strong> 012 320 01533954602 4 </p>
-      <p><strong>Tarjeta de débito:</strong> 4152 3142 3548 9286</p>
-
-      <p>Steeven:</p>
-      <p><strong>Banco:</strong>BBVA</p>
-      <p><strong>Número de Cuenta:</strong> 012 320 01529695078 2 </p>
-      <p><strong>Tarjeta de débito:</strong> 4152 3141 7855 2520</p>
-    </div>
-
-  </div>
-  <div class="attire-section">
-    <h1>Padres:</h1>
-    <img src="assets/33728.png" class="custom-img">
-    <h2>Novia</h2>
-    <p>Arturo Herrera Ramirez</p>
-    <p>Maria Gutierrez Chavez</p>
-    <h2>Novio</h2>
-    <p>Wendy Aurora Nancy Perez Hernandez</p>
-  </div>
-
-  <div class="confirmation-section bordered">
-    <img src="assets/ausencia.png" class="custom-img">
-    <h2>Confirmar Asistencia</h2>
-    <p>Por favor, confirma tu asistencia</p>
-    <div class="container">
-      <button class="button type--C" (click)='onSubmit()'>
-        <div class="button__line"></div>
-        <div class="button__line"></div>
-        <span class="button__text">Ver Formulario</span>
-        <div class="button__drow1"></div>
-        <div class="button__drow2"></div>
-      </button>
-    </div>
-  </div>
-
-  <div class="attire-section">
-    <h2>Te Esperamos</h2>
-    <h1>Keren y Steeven</h1>
-  </div>
 </div>
