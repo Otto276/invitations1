@@ -1,17 +1,150 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <div class="invitation">
-    <div class="floral-decor"></div> <!-- Decoración floral -->
-    <div class="gold-dust"></div> <!-- Efecto dorado -->
+  <div class="bg-imageDos">
 
-    <div class="container">
-        <div class="attire-section">
-            <h2>Te invitamos a compartir tus momentos favoritos con nosotros</h2>
-            <h1>Keren y Steeven</h1>
-        </div>
-        
-        <a href="https://www.bodas.net/web/W9260589" class="button">
-            <i class="fas fa-camera"></i> Abrir galería
-        </a>
+    <!-- Imagen de bienvenida -->
+    <div class="photo-section">
+      <!-- Marco con la foto adentro -->
+      <div class="photo-frame">
+        <img src="/assets/XV_prin.jpg" alt="Imagen de bienvenida" class="photo" />
+      </div>
+      <!-- Flores PNG sin fondo -->
+      <img src="/assets/rosas.png" alt="flores" class="flowers" />
+      <!-- Texto -->
+      <h1 class="name">Delia</h1>
     </div>
+    <!-- Música -->
+  <div class="invitation-music">
+    <h1>Preciona play pa la musica</h1>
+    <div class="music-player">
+      <audio controls autoplay>
+        <source src="assets/Indila-Love Story.mp3" type="audio/mp3" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+  </div>
+
+    <div class="photo-section">
+      <img src="assets/Num.png" class="photo">
+      <img src="/assets/rosas.png" alt="flores" class="flowers" />
+    </div>
+    <p>
+      En este cuento de hadas, hoy me toca a mí sentirme como una princesa...
+      Pero en mi sueño encantado, todos son protagonistas de este cuento feliz,
+      inolvidable y mágico.
+    </p>
+
+    <!-- Padres y padrinos -->
+    <div class="attire-section">
+      <img src="assets/rosas.png" class="custom-img">
+      <h2>Con el amor de mis Padres</h2>
+      <p>Benjamin Lopez Arambula</p>
+      <p>Martha Araceli Peña Rivera</p>
+      <h2>&</h2>
+      <h2>Mis Padrinos de Honor</h2>
+      <p>Luis Fernando Topete</p>
+      <p>Gabriela Lopez Arambula</p>
+
+      <h2>Dejo un mundo atrás y entro a uno nuevo...</h2>
+    </div>
+  </div>
+
+  <!-- Texto inicial -->
+  <div class="bg-image">
+    <div class="photo-section">
+      <!-- Marco con la foto adentro -->
+      <div class="photo-frame">
+        <img src="/assets/XVPastel.jpg" alt="Imagen de bienvenida" class="photo" />
+      </div>
+      <!-- Flores PNG sin fondo -->
+      <img src="/assets/rosas.png" alt="flores" class="flowers" />
+      <!-- Texto -->
+    </div>
+    <div class="photo-section">
+      <h2 class="title">Mis Quince</h2>
+      <h3>Octubre</h3>
+      <h3>Viernes 10 2025</h3>
+    </div>
+    <!-- Ceremonia -->
+    <div class="photo-section">
+      <h2 class="title">Misa</h2>
+      <h3>Hora 05:00 pm</h3>
+      <h3>Parroquia de San Francisco de Asís</h3>
+      <div class="container">
+        <button class="golden-button" (click)='openInGoogleMapsD()'>
+          <span class="button__text">Ver Ubicación</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Recepción -->
+    <div class="photo-section">
+      <h2 class="title">Recepción</h2>
+      <h3>Hora 08:00 pm</h3>
+      <h3>Real de las palmas</h3>
+      <div class="container">
+        <button class="golden-button" (click)='openInGoogleMaps()'>
+          <span class="button__text">Ver Ubicación</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Cuenta regresiva -->
+    <div class="photo-section">
+      <h2 class="title">Solo Faltan</h2>
+      <app-countdown></app-countdown>
+    </div>
+  </div>
+
+
+  <div class="bg-imageDos">
+    <!-- Pie de foto -->
+    <div class="photo-section">
+      <!-- Marco con la foto adentro -->
+      <div class="photo-frame">
+        <img src="/assets/XVSit.jpg" alt="Imagen de bienvenida" class="photo" />
+      </div>
+      <!-- Flores PNG sin fondo -->
+      <img src="/assets/rosas.png" alt="flores" class="flowers" />
+      <!-- Texto -->
+    </div>
+
+    <!-- Regalos -->
+    <div class="attire-section">
+      <h2>Regalos</h2>
+      <p>
+        El mejor regalo que me puedes dar es tu
+        presencia, pero si algo me quieres obsequiar
+        contaremos lluvia de sobres en este
+        evento tan especial!
+      </p>
+    </div>
+
+    <!-- Código de vestimenta -->
+    <div class="attire-section">
+      <h2>Vestuario</h2>
+      <img src="assets/rosas.png" class="custom-img">
+      <h3>Elegante</h3>
+      <p>Se reservan los colores Rojo, Negro y Dorado para la quinceañera</p>
+    </div>
+
+    <!-- Confirmación -->
+    <div class="attire-section">
+      <img src="assets/rosas.png" class="custom-img">
+      <h2>Confirmar Asistencia</h2>
+      <p>
+        Quiero compartir mis sueños con los que más quiero y tú eres parte de ellos.
+        En este día tan especial, te quiero invitar a mi fiesta de 15 años.
+        Por favor confirma tu asistencia.
+      </p>
+      <button class="golden-button" (click)="openWhatsApp()">Chatear por WhatsApp</button>
+    </div>
+
+    <!-- Cierre -->
+    <div class="welcome-section">
+      <h2>Te Esperamos</h2>
+      <img src="assets/bellaS.png" class="photo-part">
+    </div>
+  </div>
 </div>
