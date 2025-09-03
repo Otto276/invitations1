@@ -11,7 +11,7 @@ $color-text: #4a4a4a;
 
 .invitation {
   text-align: center;
-  width: 100%;
+  width: 89%;
   max-width: 800px;
   min-height: 100vh;
   margin: 0 auto;
@@ -75,7 +75,7 @@ $color-text: #4a4a4a;
       margin-top: 0;
       position: relative;
       height: 70vh;
-      width: 100%;
+      width: 135%;
       overflow: hidden;
       background: linear-gradient(180deg, #d4af37, #fff8dc);
       border-radius: 0 0 50% 50%;
@@ -207,13 +207,13 @@ $color-text: #4a4a4a;
   }
 
   .bg-image {
-    background-image: url('/assets/escaleras.jpg');
+    background-image: url('/assets/castillo2.jpg');
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
-    width: 100%;
+    width: 135%;
 
     &::after {
       content: "";
@@ -233,13 +233,13 @@ $color-text: #4a4a4a;
   }
 
   .bg-imageDos {
-    background-image: url('/assets/bella.jpg');
+    background-image: url('/assets/castillo.jpg');
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
-    width: 100%;
+    width: 135%;
 
     &::after {
       content: "";
