@@ -41,6 +41,8 @@ $color-text: #4a4a4a;
   }
 
   p {
+    margin-left: 1rem;
+    margin-right: 1rem;
     font-size: 1.5rem;
     font-family: "Antic Slab", cursive;
   }
@@ -111,11 +113,40 @@ $color-text: #4a4a4a;
       font-family: "Birthstone", cursive;
     }
 
-    h3 {
+    .date {
       margin: 2%;
+      width: 90%;
+      font-size: 2.5rem;
+      font-weight: normal;
+      font-family: "Antic Slab", cursive;
+    }
+
+    h3 {
+      height: 2.5vh;
+      width: 80%;
+      margin-left: 1rem;
+      margin-right: 1rem;
       font-size: 1.2rem;
       font-weight: normal;
       color: $color-dark-rose;
+      font-family: "Antic Slab", cursive;
+    }
+
+    h2 {
+      height: 5vh;
+      width: 80%;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: $color-dark-rose;
+      font-family: "Antic Slab", cursive;
+    }
+
+    p {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-size: 1.2rem;
       font-family: "Antic Slab", cursive;
     }
   }
@@ -189,6 +220,8 @@ $color-text: #4a4a4a;
     font-family: 'Charm', serif;
 
     h2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
       font-size: 2.5rem;
       font-weight: normal;
       color: $color-dark-rose;
@@ -196,6 +229,8 @@ $color-text: #4a4a4a;
     }
 
     h3 {
+      margin-left: 1rem;
+      margin-right: 1rem;
       font-size: 2rem;
       font-weight: normal;
       color: $color-dark-rose;
@@ -203,6 +238,8 @@ $color-text: #4a4a4a;
     }
 
     p {
+      margin-left: 1rem;
+      margin-right: 1rem;
       font-size: 1.2rem;
       font-family: "Antic Slab", cursive;
     }
@@ -228,7 +265,7 @@ $color-text: #4a4a4a;
       z-index: 1;
     }
 
-    > * {
+    >* {
       position: relative;
       z-index: 2;
     }
@@ -254,7 +291,7 @@ $color-text: #4a4a4a;
       z-index: 1;
     }
 
-    > * {
+    >* {
       position: relative;
       z-index: 2;
     }
