@@ -1,80 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');// importarlo en el index.html
-$countdown-bg: #ede2de;
-$text-color: #cf8788;
-$highlight-color: #d49c9b;
-$box-bg: #e6c0be;
-$box-border: #bb6a71;
+ $countdown-text: #b8860b;
+$countdown-highlight: #b8860b;
 
-//Cambiar nombre countDown a container 
 .countdown {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px;
-  background-color: $countdown-bg;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-align: center;
+  font-family: 'Forum', serif;
 
-  .time-box {
-    text-align: center;
-    font-size: 24px;
-    padding: 10px;
-    background-color: $box-bg;
-    border-radius: 8px;
-    border: 1px solid $box-border;
-    color: $text-color;
-    min-width: 80px;
-
-    span {
-      display: block;
-      font-size: 34px;
-      font-weight: bold;
-      color: $highlight-color;
-      margin-bottom: 5px; // Añade un margen inferior para separar el texto
-    }
-
-    p {
-      margin: 0;
-      font-size: 14px;
-      color: darken($text-color, 10%);
-    }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
-  button {
-    background-color: #750a2e;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: "Mea Culpa", cursive;
-    font-weight: 400;
-    font-style: normal;
-    transition: background-color 0.3s ease;
 
-    &:hover {
-      background-color: #606655;
-    }
+  &__value {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: $countdown-highlight;
+    line-height: 1;
+  }
 
-    font-family: 'Great Vibes',
-    cursive;
+  &__label {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $countdown-text;
+    margin-top: -0.2rem;
+  }
 
-    @keyframes bounce {
+  // Añadimos etiquetas de tiempo con pseudo-elementos
+  &__item:nth-child(1)::after {
+    content: "DÍAS";
+  }
+  &__item:nth-child(2)::after {
+    content: "HORAS";
+  }
+  &__item:nth-child(3)::after {
+    content: "MINUTOS";
+  }
+  &__item:nth-child(4)::after {
+    content: "SEGUNDOS";
+  }
 
-      0%,
-      20%,
-      50%,
-      80%,
-      100% {
-        transform: translateY(0);
-      }
-
-      40% {
-        transform: translateY(-10px);
-      }
-
-      60% {
-        transform: translateY(-5px);
-      }
-    }
-
+  &__item::after {
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $countdown-text;
   }
 }
