@@ -179,7 +179,7 @@ $color-text: #4a4a4a;
     // max-width: 600px;
     height: auto;
     overflow: hidden;
-    border-radius: 0px;
+    border-radius: 10px;
 
     img {
       width: 100%;
@@ -289,7 +289,7 @@ $color-text: #4a4a4a;
       margin-left: 1rem;
       margin-right: 1rem;
       font-size: 1.2rem;
-      text-align: justify;
+      //text-align: justify;
       line-height: 1.2;
       font-family: "Forum", cursive;
     }
