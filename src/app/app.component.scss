@@ -19,7 +19,7 @@ $color-text: #4a4a4a;
   padding: 0;
   border-radius: 0;
   border: none;
-  font-family: "Antic Slab", cursive;
+  font-family: "Forum", cursive;
   box-shadow: none;
   position: relative;
   display: flex;
@@ -31,21 +31,21 @@ $color-text: #4a4a4a;
     font-size: 2.5rem;
     font-weight: normal;
     color: $color-black;
-    font-family: "Birthstone";
+    font-family: "Forum";
   }
 
   h2 {
     font-size: 1.5rem;
     font-weight: normal;
     color: $color-dark-rose;
-    font-family: "Birthstone", cursive;
+    font-family: "Forum", cursive;
   }
 
   p {
     margin-left: 1rem;
     margin-right: 1rem;
     font-size: 1.5rem;
-    font-family: "Antic Slab", cursive;
+    font-family: "Forum", cursive;
   }
 
   // 🎨 Estilos generales para imágenes
@@ -111,7 +111,7 @@ $color-text: #4a4a4a;
       margin: 2%;
       font-size: 3.5rem;
       font-weight: normal;
-      font-family: "Birthstone", cursive;
+      font-family: "Forum", cursive;
     }
 
     .date {
@@ -119,7 +119,7 @@ $color-text: #4a4a4a;
       width: 90%;
       font-size: 2.5rem;
       font-weight: normal;
-      font-family: "Antic Slab", cursive;
+      font-family: "Forum", cursive;
     }
 
     h3 {
@@ -130,26 +130,34 @@ $color-text: #4a4a4a;
       font-size: 1.2rem;
       font-weight: normal;
       color: $color-dark-rose;
-      font-family: "Antic Slab", cursive;
+      font-family: "Forum", cursive;
     }
 
     h2 {
-      height: 5vh;
-      width: 80%;
       margin-left: 1rem;
       margin-right: 1rem;
-      font-size: 1.2rem;
+      font-size: 2.5rem;
       font-weight: normal;
       color: $color-dark-rose;
-      font-family: "Antic Slab", cursive;
+      font-family: "Imperial Script", cursive;
+      color: #b8860b;
     }
-
     p {
       margin-left: 1rem;
       margin-right: 1rem;
       font-size: 1.2rem;
-      font-family: "Antic Slab", cursive;
+      text-align: justify;
+      line-height: 1.8;
+      font-family: "Forum", cursive;
     }
+  }
+  .parrafo {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.2;
+    font-family: "Forum", cursive;
   }
 
   .photo-part {
@@ -166,7 +174,24 @@ $color-text: #4a4a4a;
       display: block;
     }
   }
-
+  .music {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $color-dark-rose;
+    font-family: "Forum", cursive;
+  }
+  .photoDate {
+    // position: relative;
+    // height: 100vh;
+    // width: 100%;
+    //   object-fit: cover;
+    //   border-radius: inherit;
+    height: 100px;
+    width: auto;
+    margin: 10px auto;
+  }
   // Imágenes decorativas (rosas)
   .attire-section img.custom-img[src*="rosas"] {
     height: 150px;
@@ -218,7 +243,7 @@ $color-text: #4a4a4a;
     width: 100%;
     justify-content: center;
     align-items: center;
-    font-family: 'Charm', serif;
+    font-family: "Charm", serif;
 
     h2 {
       margin-left: 1rem;
@@ -226,7 +251,8 @@ $color-text: #4a4a4a;
       font-size: 2.5rem;
       font-weight: normal;
       color: $color-dark-rose;
-      font-family: "Birthstone", cursive;
+      font-family: "Imperial Script", cursive;
+      color: #b8860b;
     }
 
     h3 {
@@ -235,19 +261,20 @@ $color-text: #4a4a4a;
       font-size: 2rem;
       font-weight: normal;
       color: $color-dark-rose;
-      font-family: "Birthstone", cursive;
+      font-family: "Forum", cursive;
     }
 
     p {
       margin-left: 1rem;
       margin-right: 1rem;
-      font-size: 1.2rem;
-      font-family: "Antic Slab", cursive;
+      font-size: 1.3rem;
+      line-height: 0.8;
+      font-family: "Forum", cursive;
     }
   }
 
   .bg-image {
-    background-image: url('/assets/castillo2.jpg');
+    background-image: url("/assets/castillo2.jpg");
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -266,14 +293,14 @@ $color-text: #4a4a4a;
       z-index: 1;
     }
 
-    >* {
+    > * {
       position: relative;
       z-index: 2;
     }
   }
 
   .bg-imageDos {
-    background-image: url('/assets/castillo.jpg');
+    background-image: url("/assets/castillo.jpg");
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -292,7 +319,7 @@ $color-text: #4a4a4a;
       z-index: 1;
     }
 
-    >* {
+    > * {
       position: relative;
       z-index: 2;
     }
