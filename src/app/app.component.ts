@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -11,11 +11,17 @@ import { CountdownComponent } from './countdown-component/countdown-component.co
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   showModal: boolean = true;
   title = 'Fecha';
   attendanceForm: FormGroup;
   showBankingInfo = false;
+
+  // 🎵 referencias al reproductor
+  @ViewChild('audioPlayer') audioRef!: ElementRef<HTMLAudioElement>;
+  @ViewChild('iconPlay') iconPlayRef!: ElementRef<SVGElement>;
+  @ViewChild('iconPause') iconPauseRef!: ElementRef<SVGElement>;
+  @ViewChild('progress') progressRef!: ElementRef<HTMLInputElement>;
 
   constructor(private fb: FormBuilder) {
     this.attendanceForm = this.fb.group({
@@ -25,12 +31,37 @@ export class AppComponent {
     });
   }
 
-  startMusic(shouldPlay: boolean) {
-    this.showModal = false;
-    if (shouldPlay) {
-      const audioPlayer = document.querySelector('audio') as HTMLAudioElement;
-      audioPlayer?.play();
-    }
+  ngAfterViewInit(): void {
+    const audio = this.audioRef.nativeElement;
+    const iconPlay = this.iconPlayRef.nativeElement;
+    const iconPause = this.iconPauseRef.nativeElement;
+    const progress = this.progressRef.nativeElement;
+
+    // Play / Pause
+    iconPlay.parentElement?.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'block';
+      } else {
+        audio.pause();
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+      }
+    });
+
+    // Actualizar barra de progreso
+    audio.addEventListener('timeupdate', () => {
+      if (audio.duration > 0) {
+        progress.value = String((audio.currentTime / audio.duration) * 100);
+      }
+    });
+
+    // Cambiar tiempo desde la barra
+    progress.addEventListener('input', () => {
+      const newTime = (Number(progress.value) / 100) * audio.duration;
+      audio.currentTime = newTime;
+    });
   }
 
   toggleBankingInfo(): void {
@@ -52,9 +83,8 @@ export class AppComponent {
     window.open(url, '_blank');
   }
 
-  // 👉 Nuevo método para abrir WhatsApp
   openWhatsApp(): void {
-    const phoneNumber = '5213325520631'; // cambia por tu número en formato internacional
+    const phoneNumber = '5213325520631';
     const message = encodeURIComponent('¡Hola! Me gustaría confirmar mi asistencia.');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');

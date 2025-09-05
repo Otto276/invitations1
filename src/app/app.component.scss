@@ -8,6 +8,7 @@ $color-gold: #d4af37;
 $color-white: #ffffff;
 $color-background: #f8f6f4;
 $color-text: #4a4a4a;
+$color-dark: #1a1a1a;
 
 .invitation {
   text-align: center;
@@ -142,6 +143,7 @@ $color-text: #4a4a4a;
       font-family: "Imperial Script", cursive;
       color: #b8860b;
     }
+
     p {
       margin-left: 1rem;
       margin-right: 1rem;
@@ -151,6 +153,7 @@ $color-text: #4a4a4a;
       font-family: "Forum", cursive;
     }
   }
+
   .parrafo {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -174,6 +177,7 @@ $color-text: #4a4a4a;
       display: block;
     }
   }
+
   .photo-castle {
     width: 100%;
     // max-width: 600px;
@@ -188,6 +192,7 @@ $color-text: #4a4a4a;
       display: block;
     }
   }
+
   .music {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -196,6 +201,13 @@ $color-text: #4a4a4a;
     color: $color-dark-rose;
     font-family: "Forum", cursive;
   }
+
+  .music-player {
+    accent-color: #d4af37; // dorado
+    width: 100%; // opcional
+    border-radius: 5px;
+  }
+
   .photoDate {
     // position: relative;
     // height: 100vh;
@@ -206,6 +218,7 @@ $color-text: #4a4a4a;
     width: 100%;
     margin: 10px auto;
   }
+
   // Imágenes decorativas (rosas)
   .attire-section img.custom-img[src*="rosas"] {
     height: 150px;
@@ -241,6 +254,7 @@ $color-text: #4a4a4a;
       box-shadow: 0 0 5px rgba($color-dark-rose, 0.8);
     }
   }
+
   .vestimenta {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -293,6 +307,7 @@ $color-text: #4a4a4a;
       line-height: 1.2;
       font-family: "Forum", cursive;
     }
+
     .parrafo {
       margin-left: 1rem;
       margin-right: 1rem;
@@ -323,7 +338,7 @@ $color-text: #4a4a4a;
       z-index: 1;
     }
 
-    > * {
+    >* {
       position: relative;
       z-index: 2;
     }
@@ -349,7 +364,7 @@ $color-text: #4a4a4a;
       z-index: 1;
     }
 
-    > * {
+    >* {
       position: relative;
       z-index: 2;
     }
@@ -384,6 +399,52 @@ $color-text: #4a4a4a;
 
     &:active {
       transform: scale(0.96);
+    }
+  }
+
+  .custom-player {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    // background: $color-dark;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+
+    .btn-play {
+      background: transparent;
+      border: 2px solid $color-gold;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: 0.3s;
+
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: $color-gold; // blanco por defecto
+        transition: fill 0.3s;
+      }
+
+      &:hover svg {
+        fill: $color-gold; // dorado al pasar el mouse
+      }
+    }
+
+    .progress-bar {
+      flex: 1;
+      accent-color: $color-gold;
+      height: 6px;
+      border-radius: 5px;
+      cursor: pointer;
     }
   }
 }
