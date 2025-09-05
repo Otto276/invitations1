@@ -84,7 +84,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   openWhatsApp(): void {
-    const phoneNumber = '5213325520631';
+    const phoneNumber = '5213310937381';
     const message = encodeURIComponent('¡Hola! Me gustaría confirmar mi asistencia.');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
