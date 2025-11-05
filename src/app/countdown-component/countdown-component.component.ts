@@ -10,7 +10,7 @@ import { differenceInDays, differenceInHours, differenceInMinutes, differenceInS
   styleUrls: ['./countdown-component.component.scss'],
 })
 export class CountdownComponent implements OnInit, OnDestroy {
-  targetDate: Date = new Date('2025-10-10T17:00:00Z');
+  targetDate: Date = new Date('2025-12-31T23:00:00Z');
   intervalId: any;
   days: number = 0;
   hours: number = 0;
