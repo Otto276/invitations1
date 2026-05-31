@@ -77,33 +77,32 @@ $color-text: #4a4a4a;
 
     .photo-frame {
       width: 100%;
-      max-width: 650px;
-      margin: 0 auto;
-      overflow: hidden;
+  max-width: 650px;
+  margin: 0 auto;
+  overflow: hidden;
 
-      .photo {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-      }
+  .photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
     }
 
     .flowers {
       position: absolute;
       bottom: 0;
-      width: min(40vw, 250px);
-      height: auto;
+      width: 250px;
       z-index: 2;
     }
 
     .name {
       position: absolute;
-      bottom: 15px;
-
+      bottom: -10px;
+      margin-top: 3rem;
       font-family: "Imperial Script";
-      font-size: clamp(3rem, 10vw, 7rem);
-      color: #b8860b;
+      font-size: 7rem;
+      color: #b8860b; // dorado
     }
 
     .title {
@@ -151,13 +150,11 @@ $color-text: #4a4a4a;
     }
   }
   .parrafo {
-    max-width: 800px;
-    width: 90%;
-    margin: 2rem auto;
-
+    margin-left: 1rem;
+    margin-right: 1rem;
     font-size: 1.2rem;
-    line-height: 1.8;
-    text-align: center;
+    text-align: justify;
+    line-height: 1.2;
     font-family: "Forum", cursive;
   }
 
@@ -176,10 +173,11 @@ $color-text: #4a4a4a;
     }
   }
   .photo-castle {
-    width: min(100%, 600px);
+    width: 100%;
+    // max-width: 600px;
     height: auto;
-    display: block;
-    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
 
     img {
       width: 100%;
@@ -197,8 +195,13 @@ $color-text: #4a4a4a;
     font-family: "Forum", cursive;
   }
   .photoDate {
-    width: min(90%, 400px);
-    height: auto;
+    // position: relative;
+    // height: 100vh;
+    // width: 100%;
+    //   object-fit: cover;
+    //   border-radius: inherit;
+    height: 100px;
+    width: 100%;
     margin: 10px auto;
   }
   // Imágenes decorativas (rosas)
@@ -239,8 +242,10 @@ $color-text: #4a4a4a;
     }
   }
   .vestimenta {
-    font-size: clamp(2rem, 8vw, 5rem);
-    line-height: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 5rem;
+    line-height: 0.8;
     font-family: "Forum", cursive;
   }
 
@@ -289,11 +294,12 @@ $color-text: #4a4a4a;
       font-family: "Forum", cursive;
     }
     .parrafo {
-      width: min(90%, 700px);
-      margin: auto;
+      margin-left: 1rem;
+      margin-right: 1rem;
       font-size: 1.2rem;
-      line-height: 1.8;
       text-align: justify;
+      line-height: 1.2;
+      font-family: "Forum", cursive;
     }
   }
 
@@ -351,73 +357,33 @@ $color-text: #4a4a4a;
 
   // Botón dorado metálico
   .golden-button {
-    width: min(90%, 300px);
-
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-
     gap: 8px;
     padding: 12px 28px;
     border: none;
-    border-radius: 50px;
+    border-radius: 50px; // cápsula
     cursor: pointer;
-
     font-size: 16px;
     font-weight: bold;
     color: #fff;
-
     background: linear-gradient(145deg, #d4af37, #f9e076, #d4af37);
-
     background-size: 200% auto;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
+
+    i {
+      font-size: 18px;
+    }
 
     &:hover {
       background-position: right center;
       transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
     }
 
     &:active {
       transform: scale(0.96);
-    }
-  }
-  @media (max-width: 768px) {
-    .invitation {
-      h1 {
-        font-size: 2rem;
-      }
-
-      h2 {
-        font-size: 2rem;
-      }
-
-      h3 {
-        font-size: 1.1rem;
-        width: 90%;
-        height: auto;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-
-      .music {
-        font-size: 1rem;
-      }
-
-      .flowers {
-        width: 120px;
-      }
-
-      .attire-section img.custom-img[src*="rosas"] {
-        height: 90px;
-      }
-
-      audio {
-        width: 90%;
-      }
     }
   }
 }

@@ -105,20 +105,4 @@ $box-border: #bb6a71;
       }
     }
   }
-  @media (max-width: 768px) {
-  .countdown {
-    gap: 4px;
-    padding: 10px;
-  }
-
-  .countdown__value {
-    min-width: 55px !important;
-    height: 55px !important;
-    font-size: 1.3rem !important;
-  }
-
-  .countdown__label {
-    font-size: 1.3rem !important;
-  }
-}
 }
