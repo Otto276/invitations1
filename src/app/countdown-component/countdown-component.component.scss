@@ -1,20 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap');// importarlo en el index.html
+@import url("https://fonts.googleapis.com/css2?family=Mea+Culpa&display=swap"); // importarlo en el index.html
 $countdown-bg: #ede2de;
 $text-color: #cf8788;
 $highlight-color: #d49c9b;
 $box-bg: #e6c0be;
 $box-border: #bb6a71;
 
-//Cambiar nombre countDown a container 
+//Cambiar nombre countDown a container
 .countdown {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 8px;
+
   padding: 20px;
-  background-color: $countdown-bg;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  margin: 0 auto;
+
+  .countdown__item {
+    display: flex;
+    align-items: center;
+  }
+
+  .countdown__value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 70px;
+    height: 70px;
+
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+
+    font-size: 2rem;
+    color: #b8860b;
+    font-family: "Forum", serif;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(3px);
+  }
+
+  .countdown__label {
+    margin: 0 5px;
+
+    font-size: 2rem;
+    color: #b8860b;
+    font-weight: bold;
+  }
 
   .time-box {
     text-align: center;
@@ -54,11 +85,9 @@ $box-border: #bb6a71;
       background-color: #606655;
     }
 
-    font-family: 'Great Vibes',
-    cursive;
+    font-family: "Great Vibes", cursive;
 
     @keyframes bounce {
-
       0%,
       20%,
       50%,
@@ -75,6 +104,21 @@ $box-border: #bb6a71;
         transform: translateY(-5px);
       }
     }
-
   }
+  @media (max-width: 768px) {
+  .countdown {
+    gap: 4px;
+    padding: 10px;
+  }
+
+  .countdown__value {
+    min-width: 55px !important;
+    height: 55px !important;
+    font-size: 1.3rem !important;
+  }
+
+  .countdown__label {
+    font-size: 1.3rem !important;
+  }
+}
 }
