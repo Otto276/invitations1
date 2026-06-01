@@ -62,6 +62,37 @@ $color-text: #4a4a4a;
     height: 50vh;
   }
 
+  .btn-play {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .btn-play svg {
+    width: 30px;
+    height: 30px;
+    fill: #b8860b;
+  }
+  .custom-player {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  audio {
+    display: none;
+  }
+
+  .progress-bar {
+    width: 220px;
+  }
   .photo-section {
     width: 100%;
     padding: 20px 10px;
@@ -428,7 +459,8 @@ $color-text: #4a4a4a;
       }
 
       audio {
-        width: 90%;
+        width: 300px;
+        max-width: 90%;
       }
     }
   }
